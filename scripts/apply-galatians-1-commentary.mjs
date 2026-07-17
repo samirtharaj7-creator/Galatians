@@ -1,0 +1,225 @@
+import { readFileSync, writeFileSync } from "node:fs";
+
+const entries = {
+  1: {
+    refs: ["Acts 9:1-6", "Acts 22:14-15", "1 Corinthians 9:1", "1 Corinthians 15:8-10"],
+    notes: [{ term: "ἀπόστολος (apostolos) — apostle", explanation: "The term denotes one commissioned and sent with delegated authority. Paul grounds that commission in the risen Christ and the Father rather than in a human institution.", scriptureReferences: ["Acts 26:16-18", "1 Corinthians 9:1"] }],
+    text: `Paul begins without the customary leisurely greeting because the authority of his gospel is already under attack. “Apostle” is not a claim to personal importance but to a commission received from beyond himself. His ministry was “not of men” in its source and not “by man” as its mediating authority. The churches may evaluate his message, but they may not reduce it to one competing human opinion among many.
+
+Jesus Christ and God the Father stand together as the source of Paul’s call. The wording gives the Son a place no creature could occupy: Christ commissions the apostle alongside the Father. Yet Paul also distinguishes the Father, who raised Jesus from the dead, from the Son who was raised. The gospel is therefore rooted in the historical resurrection and in the united saving action of Father and Son.
+
+The resurrection quietly governs everything that follows. Paul did not invent a theory about grace; the living Christ confronted, forgave, and sent a former persecutor. His apostleship embodies the message he will defend: God acts first, grace creates a new life, and no human credential can add authority to what Christ has established. Christian service still depends upon that order. Calling is received before it is exercised, and genuine spiritual authority remains accountable to the risen Lord whose gospel it serves.`
+  },
+  2: {
+    refs: ["Acts 15:22-23", "1 Corinthians 1:1-2", "Philippians 4:21-22"],
+    notes: [{ term: "ἐκκλησίαις (ekklēsiais) — churches", explanation: "The plural points to several local congregations in Galatia. They are addressed as assemblies belonging to God even while Paul confronts their serious doctrinal instability.", scriptureReferences: ["Galatians 1:2", "1 Corinthians 1:2"] }],
+    text: `Paul writes personally, but not as an isolated religious voice. “All the brethren which are with me” share his concern and stand behind the appeal. Their presence does not create the gospel’s authority, which rests in God, yet it shows that Paul’s message belongs within the fellowship of believers rather than to a private revelation detached from the church.
+
+The letter is directed to “the churches of Galatia,” probably a group of congregations rather than a single city church. The exact geographical extent of “Galatia” remains debated, but the plural makes the pastoral situation clear: the same disturbance had crossed congregational boundaries. Teachers urging circumcision and submission to the Mosaic covenant markers were not producing a minor local disagreement; they were unsettling an entire network of believers.
+
+Paul still calls these communities “churches.” Their confusion is grave, but he has not yet treated them as beyond recovery. This combination of seriousness and hope shapes the letter. Faithfulness sometimes requires naming error plainly while continuing to address wandering believers as people whom Christ is calling back. The church’s identity is a gift before it is an achievement, but that gift summons the church to hear and obey the truth of the gospel.`
+  },
+  3: {
+    refs: ["Numbers 6:24-26", "Romans 1:7", "Ephesians 2:8", "Philippians 4:7"],
+    notes: [{ term: "χάρις (charis) — grace", explanation: "Grace is God’s freely given favor expressed in saving action. In Galatians it stands opposite every attempt to make covenant standing depend upon human achievement.", scriptureReferences: ["Galatians 2:21", "Ephesians 2:8-9"] }],
+    text: `The greeting is brief, but it announces the substance of the letter. “Grace” is God’s undeserved favor moving toward sinners in Christ; “peace” is the reconciled wholeness that grace creates. Paul does not offer grace as a religious supplement to human effort. It is the fountain from which the entire Christian life flows, while peace is among its fruits.
+
+Both gifts come “from God the Father, and from our Lord Jesus Christ.” Paul again joins Father and Son in the divine work of salvation. Christ is not merely the messenger who tells humanity that God is gracious. He is Himself the giver of grace and peace, sharing the authority and saving work of the Father. The title “Lord” confesses the risen Jesus as sovereign, while “our” makes that confession personal and communal.
+
+This greeting is especially pointed in a letter about justification. The Galatians were being drawn toward a system in which their full standing among God’s people appeared to require circumcision and works prescribed by the Mosaic covenant. Paul places grace before them at the outset. The peace they seek cannot be secured by adding human qualifications to Christ’s achievement. It is received from the Father through the Son and then lived out in the obedience of faith.`
+  },
+  4: {
+    refs: ["Isaiah 53:4-6", "Mark 10:45", "Romans 4:25", "Titus 2:14", "1 Peter 2:24"],
+    notes: [{ term: "ἔδωκεν ἑαυτόν (edōken heauton) — gave himself", explanation: "The expression emphasizes Christ’s voluntary self-offering. His death was not an accident or coerced defeat but the willing fulfillment of the Father’s saving purpose.", scriptureReferences: ["John 10:17-18", "Ephesians 5:2"] }, { term: "present evil world", explanation: "Literally the present evil age: the order dominated by sin and awaiting God’s final renewal. Deliverance begins now in allegiance to Christ and reaches completion at His return.", scriptureReferences: ["Romans 12:2", "Hebrews 6:5"] }],
+    text: `Grace has a definite historical center: the Lord Jesus Christ “gave himself for our sins.” His death was voluntary, personal, and substitutionary. He did not merely display courage before suffering or awaken moral sympathy. He offered Himself because human sin had created guilt and bondage that sinners could not remove. The cross reveals both the gravity of sin and the depth of divine love.
+
+Christ’s purpose was to “deliver us from this present evil world”—more precisely, from the present evil age. Paul does not promise an escape from created life or from responsible service within the world. He speaks of rescue from the dominion of the fallen order: its guilt, loyalties, values, and enslaving powers. The new creation has already entered history in Christ, though believers still await its public completion at His appearing.
+
+This deliverance occurs “according to the will of God and our Father.” The cross is not the Son persuading an unwilling Father to become merciful. Father and Son act in one saving purpose. Christ’s once-for-all sacrifice accomplishes what ceremonies and human merit cannot; obedience follows as the life of the delivered, never as the price of deliverance.
+
+The verse also exposes the danger facing Galatia. To supplement Christ’s self-gift with covenant badges as conditions of acceptance is not spiritual progress. It turns back toward the old age from which Christ died to rescue His people.`
+  },
+  5: {
+    refs: ["Romans 11:36", "Ephesians 3:20-21", "Philippians 4:20", "Revelation 5:13"],
+    notes: [],
+    text: `Paul’s opening description of salvation rises naturally into worship. If Christ gave Himself for sins and the Father willed the rescue, glory belongs to God without remainder. The gospel excludes boasting not by diminishing human worth but by locating salvation wholly in divine grace. The redeemed may rejoice, obey, suffer, and serve, yet none can claim the saving work as an achievement of the self.
+
+“For ever and ever” looks beyond the immediate crisis in Galatia. Teachers, controversies, and human reputations pass away; God’s glory remains. The phrase is not decorative. It places the churches’ decision under the horizon of eternity. A message that redirects confidence from Christ to fleshly distinction cannot honor the God whose grace secures redemption from beginning to end.
+
+“Amen” means more than the close of a prayer. It is an affirmation: truly, let it be so. Before Paul expresses astonishment at the Galatians, he establishes the reality to which they must return. The Father’s will, the Son’s self-offering, deliverance from the evil age, and God’s everlasting glory form one indivisible gospel. Christian theology reaches its proper end when truth becomes praise and grace produces humble allegiance.`
+  },
+  6: {
+    refs: ["Galatians 5:4", "2 Corinthians 11:3-4", "Hebrews 2:1", "Revelation 14:6"],
+    notes: [{ term: "μετατίθεσθε (metatithesthe) — are deserting", explanation: "The present tense portrays an abandonment in progress. The word can describe transferring allegiance; their doctrinal shift is therefore personal disloyalty to the God who called them.", scriptureReferences: ["Galatians 1:6", "Hebrews 7:12"] }],
+    text: `Instead of the thanksgiving that commonly follows Paul’s greetings, Galatians moves directly to astonishment. The omission matches the urgency of the crisis. The believers are “so soon removed”—not merely changing opinions but transferring their allegiance while Paul writes. The wording suggests a process still underway, which explains both the severity of his warning and his hope that they can yet be restored.
+
+Their departure is first from a Person: “him that called you into the grace of Christ.” God called them through the gospel, and grace defined the sphere of their new life. A distortion of justification therefore cannot be separated from one’s relation to God. To make acceptance depend upon circumcision and the works of the Mosaic covenant is to leave the ground on which God called sinners to Himself.
+
+The rival teaching is “another gospel” only in the sense that it claims to be an alternative message of salvation. Paul will immediately deny that it is truly good news. The danger lies in its religious appearance. It spoke about Scripture, covenant, Abraham, and obedience, yet rearranged those themes so that Christ was no longer sufficient.
+
+Every generation faces versions of the same temptation: grace may be confessed verbally while assurance and belonging are made to rest on performance, ancestry, group identity, or religious distinction. Paul’s alarm teaches the church to judge every message by whether it preserves the sufficiency of God’s saving action in Christ.`
+  },
+  7: {
+    refs: ["Acts 15:1-5", "Galatians 5:10-12", "2 Peter 3:16", "Jude 3-4"],
+    notes: [{ term: "μεταστρέψαι (metastrepsai) — pervert", explanation: "The verb means to turn something into its opposite or fundamentally alter it. The agitators were not adding a harmless emphasis; they were changing good news into a message unable to save.", scriptureReferences: ["Acts 2:20", "Galatians 1:7"] }],
+    text: `There cannot be two contradictory gospels with equal claim to the name. Paul corrects his own shorthand: the alternative is “not another” of the same kind. It is a counterfeit produced by people who trouble the churches and seek to transform the gospel of Christ into something fundamentally different.
+
+The troublemakers likely presented themselves as guardians of biblical faithfulness. Acts 15 shows that some insisted Gentile believers must be circumcised and keep the law of Moses in order to be saved. Paul’s answer is not contempt for the Old Testament or hostility toward obedience. He will appeal repeatedly to Abraham, the law, and the prophets. His objection is to using the Mosaic covenant’s boundary markers as conditions of justification and full membership in God’s family.
+
+To “pervert” the gospel is to alter its saving center. Christ may still be named, but if His work becomes insufficient without a human qualification, grace has been emptied of its meaning. Error often succeeds through familiar vocabulary whose relationships have quietly changed.
+
+The verse therefore calls for more than sincerity. Teachers can be zealous, biblically literate, and socially persuasive while disturbing souls. The church must ask what a message makes foundational: Christ received by faith, or some achievement of the flesh. The gospel creates obedience and a transformed life, but its saving order cannot be reversed.`
+  },
+  8: {
+    refs: ["Deuteronomy 13:1-3", "2 Corinthians 11:13-15", "Galatians 2:5", "1 John 4:1"],
+    notes: [{ term: "ἀνάθεμα (anathema) — accursed", explanation: "The term marks a person or thing as under divine judgment. Paul does not pronounce personal revenge; he states the fearful consequence of opposing God’s saving truth.", scriptureReferences: ["1 Corinthians 16:22", "Galatians 1:8-9"] }],
+    text: `The gospel stands above its messengers. Paul places himself and his companions under the same judgment he applies to everyone else: if “we” preach contrary to the gospel already announced, their former authority cannot protect them. Christian truth is not secured by loyalty to a personality, even an apostolic one. The messenger is tested by the message centered in the crucified and risen Christ.
+
+Paul then reaches to the highest imagined authority: “an angel from heaven.” In Scripture angels truly carry messages from God, but an impressive supernatural appearance cannot overturn revelation already given. Deuteronomy had taught Israel that signs do not authenticate a call to abandon the Lord. Likewise, visions, miracles, charisma, or claims of heavenly origin must be judged by the apostolic gospel rather than becoming a new standard over it.
+
+“Let him be accursed” expresses the objective seriousness of corrupting the means by which sinners hear of salvation. Paul is not venting wounded pride. A false gospel directs trust away from Christ and thereby places both teacher and hearer in spiritual peril. The language is severe because the grace at stake is precious.
+
+This warning also restrains the church. It gives no permission to invent new condemnations or treat every secondary disagreement as another gospel. The issue is a message that overturns the foundation of salvation. Where that foundation is threatened, gentleness toward persons must not become indifference toward destructive teaching.`
+  },
+  9: {
+    refs: ["Deuteronomy 4:2", "Proverbs 30:5-6", "2 Corinthians 11:4", "2 John 9-10"],
+    notes: [],
+    text: `Repetition removes any possibility that Paul’s warning was an impulsive exaggeration. “As we said before” may refer to instruction given when he was present among them or to the immediately preceding sentence; in either case, he deliberately restates the judgment. The churches must understand that the boundary is real.
+
+The standard is “that ye have received.” The gospel entered Galatia as public apostolic proclamation, was embraced by faith, and was confirmed by the Spirit’s work among them. Paul is not commending mere attachment to tradition because it is old. He points to the historically delivered message of Christ’s saving work against later revisions that contradict its substance.
+
+The warning concerns anyone who “preach[es] any other gospel unto you.” Status, eloquence, apparent success, or closeness to respected centers of influence cannot make a contradictory message true. Nor can the church revise the gospel to fit social pressure. The repeated anathema places the teacher under God’s judgment, leaving final sentencing with God rather than inviting personal vengeance.
+
+Faithfulness therefore includes both receiving and guarding. Believers remain teachable, but teachability is not endless openness to whatever claims spiritual authority. Growth deepens understanding of the gospel; it does not replace grace with a new basis of acceptance. What God has accomplished in Christ remains the measure of every development.`
+  },
+  10: {
+    refs: ["1 Samuel 15:24", "John 5:41-44", "1 Thessalonians 2:4", "James 4:4"],
+    notes: [{ term: "πείθω (peithō) — persuade / seek approval", explanation: "In this context the verb carries the sense of winning favor or approval. Paul’s severe defense makes clear that pleasing people is not governing his proclamation.", scriptureReferences: ["Galatians 1:10", "1 Thessalonians 2:4"] }],
+    text: `The two questions expose Paul’s motive. His uncompromising words are hardly calculated to win universal approval. If opponents accused him of making conversion easy for Gentiles by omitting circumcision, his answer is that the gospel was not shaped to please an audience. He seeks God’s approval because God entrusted the message to him.
+
+This does not make harshness a virtue. Elsewhere Paul becomes “all things to all men” in matters where adaptation can serve the gospel, and he urges speech marked by grace. The decisive distinction is between removing unnecessary cultural barriers and altering the saving truth itself. Love may change its manner of approach; it cannot change its Lord.
+
+“If I yet pleased men” may glance back at Paul’s former life, when zeal for ancestral traditions advanced his standing among his contemporaries. The encounter with Christ gave him a new Master. A “servant of Christ” belongs to Christ and must speak under His authority, even when obedience costs reputation or security.
+
+The verse searches every ministry. Desire for acceptance can disguise itself as compassion, prudence, or relevance. Conversely, needless offensiveness can disguise itself as courage. The true question is neither whether people approve nor whether they are upset, but whether the servant faithfully represents Christ. Freedom from human domination comes through willing bondage to the One who gave Himself for us.`
+  },
+  11: {
+    refs: ["1 Corinthians 2:1-5", "1 Corinthians 15:1-4", "1 Thessalonians 2:13", "2 Peter 1:16"],
+    notes: [{ term: "κατὰ ἄνθρωπον (kata anthrōpon) — according to man", explanation: "The phrase denies that Paul’s gospel is human in origin, character, or controlling standard. It does not deny that the message was communicated through human speech and witnesses.", scriptureReferences: ["Galatians 1:11-12", "1 Thessalonians 2:13"] }],
+    text: `Paul now develops the claim announced in verse 1. He addresses the Galatians as “brethren,” preserving pastoral affection even while correcting them. The gospel he preached is “not after man”: it does not arise from human speculation, conform to fallen human instincts, or depend upon human authorization.
+
+The claim concerns origin, not a rejection of every human means. Paul learned the Scriptures from human teachers, knew the church’s confession about Jesus, and later compared his mission with other apostles. The risen Christ nevertheless supplied the decisive revelation that transformed those facts into the gospel commission governing his life. No human process can explain the reversal from persecutor to herald.
+
+A humanly designed gospel tends to preserve grounds for pride. It may flatter intellect, ancestry, achievement, or religious performance. The message Paul received humbles every person beneath the cross and then grants equal standing in Christ. Its offense and its freedom share the same source: salvation is God’s work before it becomes human testimony.
+
+By calling the Galatians to recognize this origin, Paul is not demanding blind loyalty. His own history, the Scripture argument that follows, and the Spirit’s work among them provide public lines of confirmation. Revelation does not evade examination; it supplies the standard by which human claims are judged.`
+  },
+  12: {
+    refs: ["Matthew 16:16-17", "Acts 9:3-6", "Acts 26:15-18", "1 Corinthians 11:23", "Ephesians 3:3-5"],
+    notes: [{ term: "ἀποκάλυψις (apokalypsis) — revelation", explanation: "Revelation is an uncovering made by God. Here it centers on Jesus Christ disclosed to Paul and commissioning him, not on private insight produced by reflection.", scriptureReferences: ["Acts 9:3-6", "Galatians 1:16"] }],
+    text: `Paul neither received the gospel as a merely human tradition nor acquired it through ordinary instruction. The two denials prepare the positive claim: it came “by the revelation of Jesus Christ.” The phrase can include both Christ as the One revealed and Christ as the One who reveals. Paul’s account soon emphasizes God revealing His Son in him, while Acts records the risen Jesus personally confronting and commissioning him.
+
+This does not mean Paul knew no Christian teaching from other believers. After his conversion Ananias ministered to him, and Paul later met Peter and James. Nor does it imply a gospel different from theirs; chapter 2 will stress their recognition of the same grace. The point is that Paul’s apostolic message and authority did not derive from Jerusalem or depend upon later human endorsement.
+
+The revelation was inseparable from the cross and resurrection. The One Paul regarded as a condemned deceiver appeared as the living Lord. In that encounter Paul’s reading of Scripture, judgment of Jesus, and persecution of the church were all overturned. Grace became concrete: the persecutor was forgiven and sent to preach the faith he had tried to destroy.
+
+Claims of private revelation must never use this verse to escape biblical testing. Paul’s gospel agrees with the prophetic Scriptures, centers on the historical Christ, and bears apostolic confirmation. True revelation magnifies Jesus and subjects the messenger to His truth; it does not authorize a new gospel.`
+  },
+  13: { refs: ["Acts 8:3", "Acts 9:1-2", "Acts 22:3-5", "1 Timothy 1:13"], notes: [{ term: "ἀναστροφή (anastrophē) — former conduct", explanation: "The word describes one’s manner of life; the KJV’s ‘conversation’ has this older, broader sense.", scriptureReferences: ["Galatians 1:13", "1 Peter 1:15"] }], text: `Paul’s former life supplies evidence that his gospel did not grow from a gradual adjustment within his previous convictions. He had been moving violently in the opposite direction.
+
+“The Jews’ religion” refers to Judaism as Paul formerly practiced it, not to a dismissal of the Old Testament faith. Paul remained an Israelite and received the Hebrew Scriptures as God’s word. His confession is that zeal for a particular defense of ancestral religion had made him an enemy of God’s Messiah and people.
+
+He persecuted the church “beyond measure” and tried to destroy it. Acts shows him entering homes, imprisoning believers, approving violence, and carrying the campaign beyond Jerusalem. Paul was not a neutral seeker needing a little more information; he was an aggressor stopped by mercy.
+
+That history strengthens his argument about grace. If religious zeal, discipline, and inherited privilege could justify, Paul would have needed no radical rescue. Instead, the persecutor became an apostle because Christ intervened. The church may remember grievous sin truthfully without treating it as stronger than grace. Forgiveness does not make the past good, but it can turn the past into testimony to God’s patient power.` },
+  14: { refs: ["Mark 7:8-13", "Acts 22:3", "Philippians 3:4-6"], notes: [{ term: "πατρικῶν παραδόσεων (patrikōn paradoseōn) — ancestral traditions", explanation: "Teachings and practices handed down within the fathers’ heritage. Tradition becomes dangerous when it governs Scripture or resists God’s work in Christ.", scriptureReferences: ["Mark 7:8-13", "Galatians 1:14"] }], text: `Paul had advanced beyond many contemporaries in discipline, recognition, and zeal. The claim is not nostalgic boasting; it shows how little worldly advantage he gained by following Christ.
+
+His zeal focused on “the traditions of my fathers.” Communities necessarily receive memory and instruction from earlier generations, and inherited teaching is not evil merely because it is old. Danger arises when tradition becomes the controlling authority, obscures God’s commandments, or makes loyalty to Christ appear unfaithful.
+
+Paul’s story mirrors the Galatian crisis. He knew how religious achievement and inherited distinction become grounds for confidence in the flesh. The agitators were urging Gentiles toward circumcision as though fuller acceptance lay on that road. Paul had traveled much farther along it and discovered that zeal without the knowledge of Christ can oppose the God it claims to honor.
+
+Gratitude for spiritual heritage should make believers more responsive to Scripture and Christ, not less. No age of tradition, intensity of sincerity, or approval of respected peers can substitute for truth. The gospel judges every heritage while fulfilling what truly bears witness to Christ.` },
+  15: { refs: ["Isaiah 49:1-6", "Jeremiah 1:4-5", "Romans 1:1", "1 Corinthians 15:10"], notes: [{ term: "ἀφορίσας (aphorisas) — set apart", explanation: "The language echoes prophetic call narratives and places Paul’s mission within God’s purpose before Paul understood it.", scriptureReferences: ["Jeremiah 1:5", "Romans 1:1"] }], text: `The subject of Paul’s life changes from “I” to God. Humanly viewed, Paul advanced and persecuted. In the deeper history disclosed by grace, God had set him apart from birth and called him at the appointed time.
+
+The wording echoes Jeremiah and Isaiah’s Servant. Paul understands his Gentile mission within Israel’s prophetic story: the God who forms His servants sends His saving light to the nations. This does not erase the uniqueness of the prophets or make Paul the Messiah; it locates his apostleship in God’s long purpose now fulfilled in Christ.
+
+“It pleased God” emphasizes gracious initiative. Paul’s zeal did not earn a Christian commission. The persecutor was called “by his grace,” and even the capacity to serve arose from mercy.
+
+Being set apart from birth should not become fatalism. Paul truly resisted, was confronted, and obeyed. Providence and response meet without turning a person into a machine. Years of misdirected zeal did not defeat God’s intention, yet divine patience never excused the evil through which God pursued him.` },
+  16: { refs: ["Isaiah 49:6", "Acts 9:15-20", "Acts 26:16-18", "2 Corinthians 4:6"], notes: [{ term: "ἐν ἐμοί (en emoi) — in me", explanation: "The phrase may include revelation to Paul’s understanding and through his transformed life; its focus is God making His Son known for mission.", scriptureReferences: ["2 Corinthians 4:6", "Galatians 2:20"] }], text: `God’s call centered on revealing “his Son.” Paul did not merely adopt new ethics. God made known the crucified Jesus as His divine Son and risen Lord, transforming Paul’s understanding because He transformed his allegiance.
+
+“To reveal his Son in me” can carry inward and outward force. Christ was disclosed to Paul’s heart, and the change in the persecutor displayed Christ through his life. The stated purpose, however, is mission: Paul was to preach the Son among the Gentiles. Revelation led to service rather than private status.
+
+The Gentile commission continues Isaiah’s promise of salvation reaching the nations. Justification by faith was not an accommodation invented to ease Gentile entry; their inclusion belonged to God’s prophetic purpose.
+
+Paul did not immediately “confer with flesh and blood” because Christ’s commission did not await human approval. This is not praise of isolation. Paul later sought fellowship and agreement with other apostles. Prompt obedience remains governed by revealed truth and open to confirmation within Christ’s body.` },
+  17: { refs: ["Acts 9:19-25", "Acts 26:19-20", "2 Corinthians 11:32-33"], notes: [{ term: "Arabia", explanation: "Likely Nabataean territory extending toward Damascus. Scripture does not state the length or detailed purpose of Paul’s stay.", scriptureReferences: ["Galatians 1:17", "2 Corinthians 11:32"] }], text: `Paul did not go immediately to Jerusalem for credentials from earlier apostles. He went into Arabia and later returned to Damascus, showing that his gospel and commission did not originate in Jerusalem.
+
+Scripture gives few details about the Arabian period. It may have included preaching, solitude, reflection on Scripture, or a combination, but certainty would exceed the text. Arabia likely refers to Nabataean territory, not necessarily a distant desert retreat.
+
+Paul’s argument does not depend on a romantic account of private preparation. The risen Christ had commissioned him before Jerusalem played any role. During these years he necessarily reread the Scriptures in the light of the Messiah he once opposed, seeing promise, law, sacrifice, and prophetic hope converge in Jesus.
+
+Independence from human authorization did not become contempt for fellowship. Paul soon met Peter and James and later labored for unity. The gospel frees servants from dependence on prestige while joining them to one body. Solitude may prepare a calling, but it cannot justify a private Christianity accountable to no one.` },
+  18: { refs: ["Acts 9:26-30", "Acts 22:17-21", "1 Corinthians 15:3-5"], notes: [{ term: "ἱστορῆσαι (historēsai) — visit / become acquainted with", explanation: "The verb suggests making Peter’s acquaintance, not receiving a complete course of authorization or instruction.", scriptureReferences: ["Galatians 1:18", "Acts 9:27"] }], text: `Only after three years did Paul visit Jerusalem. Ancient inclusive counting may affect the precise duration, but the period was ample to show that his ministry began independently. His gospel was already being preached.
+
+Paul stayed with Peter for fifteen days. The visit allowed meaningful fellowship and firsthand testimony, but it could hardly explain the origin of the message Paul had long proclaimed. Peter had walked with Jesus and witnessed the resurrection; Paul had encountered the risen Lord and received a Gentile commission. Their fellowship joined distinct callings around the same Christ.
+
+Acts remembers that Jerusalem believers initially feared Paul until Barnabas introduced him. The former persecutor entered fellowship with those he had terrorized. Grace reconciles vertically and horizontally: Christ forgives enemies and creates a community able to receive the repentant, though trust may wisely grow through truthful testimony and tested fruit.
+
+Apostolic unity did not require identical histories or one servant deriving authority from another. It required a common Lord, one gospel, and mutual recognition of grace.` },
+  19: { refs: ["Matthew 13:55", "Acts 12:17", "Acts 15:13", "1 Corinthians 15:7"], notes: [{ term: "the Lord’s brother", explanation: "James, a member of Jesus’ earthly family, became a leading figure in Jerusalem after the risen Christ appeared to him.", scriptureReferences: ["Matthew 13:55", "Acts 15:13"] }], text: `Paul saw no other apostle except James, the Lord’s brother. James had not belonged to the Twelve during Jesus’ ministry, but the risen Christ appeared to him and he became a leading figure in Jerusalem. “Apostle” may be used here in a broader commissioned sense, or the construction may distinguish James as the other notable leader Paul met.
+
+Jesus’ brothers did not initially believe in Him. James’ later faith and leadership therefore provide a quiet resurrection witness: familiarity according to the flesh had not created faith, but the risen Lord did.
+
+Paul names James because limited contact strengthens his case. He is not concealing long tutoring by Jerusalem leaders. Brief meetings with Peter and James permitted acquaintance and mutual recognition, not the creation of his gospel.
+
+Yet independent calling did not prevent respect for those Christ placed in other roles. Different histories and fields of service meet under one Lord. Church unity rests neither on a single human chain of prestige nor on isolated self-appointment, but on Christ’s call confirmed through shared truth and faithful ministry.` },
+  20: { refs: ["Romans 9:1", "2 Corinthians 1:23", "2 Corinthians 11:31"], notes: [{ term: "before God", explanation: "Paul places his account under God’s witness because these historical facts matter for defending the gospel.", scriptureReferences: ["Romans 9:1", "2 Corinthians 11:31"] }], text: `Paul interrupts his narrative with a solemn assurance: “Before God, I lie not.” His movements and contacts were apparently disputed or vulnerable to distortion. Because the origin of his apostleship affected confidence in the gospel, historical accuracy carried theological weight.
+
+The appeal is not theatrical. Paul speaks consciously before the One who knows every journey, conversation, and motive. Scripture warns against casual oaths; this exceptional solemnity should make ordinary speech more truthful, not encourage careless appeals to divine witness.
+
+Christian faith cannot separate doctrine from history. The gospel concerns events: Christ gave Himself, was raised, appeared, and commissioned witnesses. Paul’s encounter and movements likewise occurred in public time. Faith is more than verifying facts, but it is not indifferent to whether witnesses tell the truth.
+
+Integrity also requires accuracy about one’s own story. Testimony can be shaped to enlarge the speaker or conceal dependence. Paul places himself under judgment rather than using autobiography for self-promotion. His account protects believers from surrendering the gospel of grace to those who misrepresented its messenger.` },
+  21: { refs: ["Acts 9:30", "Acts 11:25-26", "Acts 15:23"], notes: [{ term: "Syria and Cilicia", explanation: "These regions included Antioch and Tarsus, important settings for Paul’s early ministry before the later Jerusalem consultation.", scriptureReferences: ["Acts 9:30", "Acts 11:25-26"] }], text: `After Jerusalem Paul went into Syria and Cilicia. Acts records his departure for Tarsus and later ministry with Barnabas in Antioch. These years placed him in active mission among Jews and Gentiles before the consultation described in Galatians 2.
+
+The geography continues his defense. Paul was not living under daily Jerusalem supervision or repeating a message learned through constant contact with Judea. Christ’s commission unfolded in other fields where churches could observe its content and fruit.
+
+These culturally mixed regions pressed the practical question at the heart of Galatians: on what basis do Gentiles enter God’s people? Paul’s answer appeared in communities formed around faith in Christ rather than conversion to Jewish ethnicity. Antioch became a major center for mission to the nations.
+
+God’s work is not confined to a visible religious center. Jerusalem held unique importance, but the risen Christ sent witnesses outward. Faithful ministry in less celebrated regions belonged fully to His purpose; divine calling is not measured by proximity to influence.` },
+  22: { refs: ["Acts 8:1", "Acts 9:26", "1 Thessalonians 2:14"], notes: [{ term: "churches of Judaea which were in Christ", explanation: "Their location was Judean, but their deepest identity was union with Christ rather than ethnicity.", scriptureReferences: ["Romans 16:7", "1 Thessalonians 2:14"] }], text: `Paul remained personally unknown by face to Judea’s churches. Some Jerusalem leaders had met him, but the wider congregations had not received extensive ministry from him. His gospel cannot be explained as the product of long formation in those churches.
+
+They are described as “in Christ.” Their Jewish heritage and location were real, yet their defining identity came from union with the Messiah. The phrase anticipates the letter’s affirmation that believers from different backgrounds are one in Christ. Judean congregations do not possess a higher grade of membership, and Gentiles need not become ethnically Jewish to share the same life.
+
+Paul’s persecution had deeply affected this region, so his name was known even when his face was not. They knew him first as a threat and then through reports of grace.
+
+Christian fellowship extends beyond personal contact. Churches may thank God for distant work without building devotion around celebrity. The center is not access to a famous worker but shared life in Christ, an identity that creates unity across geography, culture, and differing histories.` },
+  23: { refs: ["Acts 9:20-21", "Acts 26:9-20", "1 Corinthians 15:9-10", "1 Timothy 1:12-16"], notes: [{ term: "the faith", explanation: "Here the phrase denotes the Christian message and way of allegiance centered on Jesus, not merely the inward act of believing.", scriptureReferences: ["Acts 6:7", "Jude 3"] }], text: `Judean believers kept hearing an astonishing report: the man who once persecuted them now preached the faith he tried to destroy. Paul’s transformation was public enough to be summarized in one unforgettable reversal.
+
+“The faith” means more than Paul’s inward trust. It is the recognizable gospel truth centered on Christ. The Judean churches did not hear that Paul spread a novel religion; they recognized that he proclaimed the faith for which they had suffered.
+
+The verse does not minimize persecution’s damage. Paul could not undo every wound by becoming a preacher. Grace does not erase moral reality or make restitution irrelevant. It does create a future not determined by the sinner’s former identity. The report holds both truths together: “he which persecuted us” is now preaching.
+
+Paul’s life embodies his gospel. Religious advancement might have refined his zeal; only grace could condemn his pride, forgive his violence, and redirect his strength toward Christ. Dramatic biography alone proves nothing, but sustained allegiance to the truth once opposed bears credible fruit.` },
+  24: { refs: ["Matthew 5:16", "Acts 11:18", "1 Corinthians 15:10", "1 Timothy 1:16-17"], notes: [{ term: "glorified God in me", explanation: "The churches praised God for what grace accomplished in Paul, directing attention through the servant to the divine source.", scriptureReferences: ["Matthew 5:16", "1 Corinthians 15:10"] }], text: `The chapter closes with worship rather than admiration of Paul. Judean believers glorified God because of what He accomplished in Paul’s conversion and ministry. They did not deny his former violence, but neither did they treat evil as having the final word over a life claimed by grace.
+
+Their response models discernment. A persecuted community could wisely remain cautious while trust grew through tested fruit. Yet when transformation became clear, they praised God rather than protecting themselves through permanent suspicion. Forgiveness and wisdom are not enemies.
+
+Their praise reinforces Paul’s argument. If God receives glory for the change, Paul cannot take credit for his apostleship or gospel. His story displays divine mercy—the same grace threatened by teachers who redirected confidence toward the flesh.
+
+This is the proper goal of testimony. The servant should become transparent to the Savior. When a changed life leaves hearers chiefly impressed with personality, the story has been misdirected; when it leads them to magnify God’s patience, power, and freedom, grace has found its fitting answer. God acted, Christ saves, and all glory returns to Him.` }
+};
+
+const chapterPath = "content/galatians/chapter-01.json";
+const chapter = JSON.parse(readFileSync(chapterPath, "utf8"));
+for (const verse of chapter.verses) {
+  const number = Number(verse.verse.split(":").at(-1));
+  const entry = entries[number];
+  if (!entry) throw new Error(`Missing commentary for ${verse.verse}`);
+  verse.crossReferences = entry.refs;
+  verse.wordNotes = entry.notes;
+  verse.commentary.detailedExplanation = entry.text;
+  verse.reviewStatus = "verified-seed";
+}
+writeFileSync(chapterPath, `${JSON.stringify(chapter, null, 2)}\n`);

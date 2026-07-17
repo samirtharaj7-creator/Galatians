@@ -1,0 +1,33 @@
+{
+  "name": "galatians-commentary",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "PATH=./bin:$PATH NEXT_TEST_WASM_DIR=./node_modules/@next/swc-wasm-nodejs next dev --webpack",
+    "build": "PATH=./bin:$PATH NEXT_TEST_WASM_DIR=./node_modules/@next/swc-wasm-nodejs next build --webpack",
+    "start": "PATH=./bin:$PATH next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "generate:content": "node scripts/generate-galatians-content.mjs",
+    "check": "npm run typecheck && npm run lint && npm run build"
+  },
+  "dependencies": {
+    "lucide-react": "latest",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "latest"
+  },
+  "devDependencies": {
+    "@next/swc-wasm-nodejs": "^16.2.6",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "autoprefixer": "^10.5.0",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.17",
+    "typescript": "latest"
+  }
+}
