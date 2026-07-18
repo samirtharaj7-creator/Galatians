@@ -15,12 +15,13 @@ export default function ArticlesPage() {
           <BookOpenText className="h-7 w-7" />
         </span>
         <p className="articles-coming-kicker">Galatians Study Library</p>
-        <h1 id="articles-title">New articles coming soon.</h1>
+        <h1 id="articles-title">Study paths through Galatians</h1>
         <p>
-          Additional studies will be added here to accompany the chapter-by-chapter commentary.
+          Trace Paul’s defense of the gospel, justification by faith, the promise to Abraham,
+          Christian freedom, life in the Spirit, and the new creation across all six chapters.
         </p>
         <Link href="/galatians/1" className="articles-coming-link">
-          Read the commentary <ArrowRight className="h-4 w-4" />
+          Begin with Galatians 1 <ArrowRight className="h-4 w-4" />
         </Link>
       </section>
     </main>
